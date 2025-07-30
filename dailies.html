@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <title>Daily Progress</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div id="navbar"></div>
+
+  <main>
+    <section class="content-flow">
+      <div class="content-wrapper">
+        <h2>Daily Log</h2>
+
+        <div class="dailies-content">
+          <div class="week-section">
+            <h3>Week 1</h3>
+
+            <div class="daily-entry">
+              <h4>Day 1 - Stakeholder Meeting</h4>
+              <p>We learned about the challenges of accurate footfall counting in a listed building with limited budget
+                and strict modification rules.</p>
+            </div>
+
+            <div class="daily-entry">
+              <h4>Day 2 - Initial Research</h4>
+              <p>Explored existing solutions and their limitations. Brainstormed potential approaches for our solution.
+              </p>
+            </div>
+
+            <div class="daily-entry">
+              <h4>Day 3 - Ideation Sketches</h4>
+              <p>Created a lo-fi prototype of a dual IR sensor system. Realised placement and directionality matter more
+                than expected.</p>
+            </div>
+
+            <div class="daily-entry">
+              <h4>Day 4 - Client Feedback</h4>
+              <p>Created pitch deck and video, along with reflections.</p>
+
+              <div class="prototype-video">
+                <p><strong>Pitch Video 1:</strong></p>
+                <video width="100%" height="520" controls>
+                  <source src="assets/video/Team-17-Pitch-Video-Week-1.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <div class="week-section">
+            <h3>Week 2</h3>
+
+            <div class="daily-entry">
+              <h4>Day 5 - Dashboard Prototyping</h4>
+              <p></p>
+            </div>
+
+            <div class="daily-entry">
+              <h4>Day 6 - </h4>
+              <p></p>
+            </div>
+
+            <div class="daily-entry">
+              <h4>Day 7 - </h4>
+              <p></p>
+            </div>
+
+            <div class="daily-entry">
+              <h4>Day 8 - </h4>
+              <p></p>
+            </div>
+
+            <div class="daily-entry">
+              <h4>Day 9 - </h4>
+              <p></p>
+            </div>
+
+            <div class="prototype-video">
+              <p><strong>Pitch Video 2:</strong></p>
+              <video width="100%" height="520" controls>
+                <source src="" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+
+          <div class="week-section">
+            <h3>Week 3</h3>
+
+            <div class="daily-entry">
+              <h4>Day 10 - </h4>
+              <p></p>
+            </div>
+
+            <div class="daily-entry">
+              <h4>Day 11 - </h4>
+              <p></p>
+            </div>
+
+            <div class="daily-entry">
+              <h4>Day 12 - </h4>
+              <p></p>
+            </div>
+
+            <div class="daily-entry">
+              <h4>Day 13 - </h4>
+              <p></p>
+            </div>
+
+            <div class="daily-entry">
+              <h4>Day 14 - </h4>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>© Copyright Team 17 - Kibble Palace Project. All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script>
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <title>Final Proposal</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div id="navbar"></div>
+
+  <main>
+    <section class="content-flow">
+      <div class="content-wrapper">
+        <h2>Final System Proposal</h2>
+
+        <div class="final-content">
+          <div class="solution-overview">
+            <p class="large-text"><strong>Solution:</strong> Discreet dual IR beam counter with a dedicated Dashboard.
+              QR Code form for country of origin tracking.</p>
+
+            <p>Our final proposal represents a comprehensive footfall tracking system specifically designed for heritage
+              environments like the Kibble Palace. The solution balances technological sophistication with heritage
+              sensitivity, ensuring accurate data collection without compromising the building's historic character or
+              visitor experience.</p>
+          </div>
+
+          <div class="system-components">
+            <h3>System Components</h3>
+
+            <div class="features-list">
+              <p><strong>Core Features:</strong></p>
+              <p>Low-cost microcontroller (e.g. ESP32)</p>
+              <p>Counts are time-stamped and stored</p>
+              <p>Tracking both exit and entry records</p>
+              <p>Visualised via web dashboard (Daily, Weekly, Event-based)</p>
+            </div>
+          </div>
+
+          <div class="value-proposition">
+            <h3>Why It Matters</h3>
+            <p class="large-text">This solution enables better resource planning, helps justify staffing, and supports
+              long-term funding decisions.</p>
+
+            <p>Beyond immediate operational benefits, our system demonstrates how heritage sites can embrace modern
+              technology responsibly. The privacy-first approach and heritage-sensitive installation create a replicable
+              model for other historic venues facing similar challenges.</p>
+
+            <p>By providing accurate, real-time visitor data, Glasgow City Council can optimize operations, improve
+              visitor experiences, and make evidence-based decisions about the future of this magnificent Victorian
+              glasshouse.</p>
+          </div>
+
+          <div class="interactive-demo">
+            <h3>Interactive Demo</h3>
+            <p>Explore our live dashboard prototype to view real-time visualisation of visitor data and how the system
+              operates.</p>
+
+            <div class="demo-button-container">
+              <a href="Dashboard-Prototype/index.html" target="_blank" class="button-link">View Dashboard Prototype</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>© Copyright Team 17 - Kibble Palace Project. All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script>
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      });
+  </script>
+</body>
+
+</html>

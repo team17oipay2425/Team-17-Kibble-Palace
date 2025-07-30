@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <title>About Us</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div id="navbar"></div>
+
+  <main>
+    <section class="content-flow">
+      <div class="content-wrapper">
+        <h2>About Our Team</h2>
+        <div class="about-content">
+          <p class="large-text">Team members: Fan Xinyu, Dawn Aw Tay Rui Qi, Chew Liang Zhi, Elroy Lee, Ng Quan Han, Goh
+            Jia Rui Gary</p>
+
+          <p>We're a group of student designers and developers focused on creating meaningful, low-cost solutions for
+            real-world problems. Our diverse backgrounds in engineering, design, and technology allow us to approach
+            challenges from multiple perspectives.</p>
+
+          <p><strong>Our Mission:</strong><br>To deliver an accurate, user-centered footfall tracking system that
+            respects the heritage and design of the Kibble Palace while providing valuable insights for facility
+            management.</p>
+
+          <p>Throughout this project, we've learned the importance of balancing technological innovation with heritage
+            preservation, ensuring that our solutions enhance rather than compromise the historical significance of this
+            magnificent Victorian glasshouse.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>© Copyright Team 17 - Kibble Palace Project. All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script>
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <title>Reflections</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div id="navbar"></div>
+
+  <main>
+    <section class="content-flow">
+      <div class="content-wrapper">
+        <h2>Reflections</h2>
+
+        <div class="reflections-content">
+          <div class="reflection-section">
+            <h3>Insights from Client Meetings</h3>
+            <p class="large-text">Our discussions with the Friends of Glasgow Botanic Gardens revealed crucial insights
+              that shaped our entire approach.</p>
+
+            <p><strong>Privacy and Discretion:</strong> They value discretion and privacy more than flashy tech. This
+              insight led us to prioritize anonymous counting methods and reject any camera-based solutions that might
+              make visitors uncomfortable.</p>
+
+            <p><strong>Heritage Sensitivity:</strong> Budget and listed building status drive every decision. We learned
+              that even the most innovative solution is worthless if it can't be implemented within the strict heritage
+              guidelines that protect the Kibble Palace's historical integrity.</p>
+          </div>
+
+          <div class="reflection-section">
+            <h3>What We Learned from Prototyping</h3>
+            <p class="large-text">The prototyping process revealed both technical challenges and design opportunities we
+              hadn't initially considered.</p>
+
+            <p><strong>Directional Accuracy:</strong> Our initial solution lacked the capability to track direction of
+              footfall, resulting in high inaccuracy. This discovery led us to develop the dual-sensor approach that
+              became central to our final design.</p>
+
+            <p><strong>Real-world Constraints:</strong> Sketching the flow revealed practical constraints (e.g., group
+              entries, line-of-sight) that we hadn't anticipated in our initial concepts.</p>
+
+            <p><strong>Rapid Iteration:</strong> Paper prototyping allowed for quick sketches to be made, avoiding
+              costly mistakes in the digital implementation phase. This approach helped us test multiple concepts
+              quickly and identify the most promising directions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>© Copyright Team 17 - Kibble Palace Project. All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script>
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      });
+  </script>
+</body>
+
+</html>

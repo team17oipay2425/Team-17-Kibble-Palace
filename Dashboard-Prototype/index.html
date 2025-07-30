@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Visitor Analytics Dashboard</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Chart.js + Plugin -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Top Bar -->
+    <header class="topbar">
+      <span>🌤️ Weather: 21°C, Partly Cloudy</span>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Visitor Summary Cards -->
+      <section class="stats">
+        <div class="card">Visitors Today: <strong>148</strong></div>
+        <div class="card">Week to Date: <strong>920</strong></div>
+        <div class="card">Month to Date: <strong>3,652</strong></div>
+      </section>
+
+      <!-- Charts Section -->
+      <section class="charts">
+        <!-- Column 1: Visitor Trends + Events -->
+        <div class="chart-column">
+          <div>
+            <h3>Visitor Trends</h3>
+            <canvas id="trendChart"></canvas>
+          </div>
+          <div>
+            <h3>Top 3 Events This Month</h3>
+            <canvas id="eventsChart"></canvas>
+          </div>
+        </div>
+
+        <!-- Column 2: Country of Origin -->
+        <div>
+          <h3>Country of Origin</h3>
+          <canvas id="countryChart"></canvas>
+        </div>
+
+        <!-- Full-width: Weather Impact -->
+        <div class="wide-chart">
+          <h3>Weather Impact</h3>
+          <canvas id="weatherChart" height="300"></canvas>
+        </div>
+      </section>
+
+      <!-- Report Export Section -->
+      <section class="reports">
+        <h3>Export Reports</h3>
+        <button>Download Daily Report</button>
+        <button>Download Weekly Report</button>
+        <button>Download Monthly Report</button>
+      </section>
+    </main>
+  </div>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
