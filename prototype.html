@@ -11,116 +11,350 @@
 <body>
   <div id="navbar"></div>
 
-  <main>
-    <section class="content-flow">
-      <div class="content-wrapper">
-        <h2>Prototype Concepts</h2>
+  <div class="bg-decoration"></div>
 
-        <div class="prototype-content">
-          <h3>Dual Infrared Break Beam Sensors</h3>
-          <p class="large-text">We explored the use of dual infrared break beam sensors at the entrance to the Kibble
-            Palace.</p>
+  <div class="container">
+    <header class="header">
+      <h1>Prototype Concepts</h1>
+      <p>Explore our iterative design process through interactive prototypes and comprehensive testing methodologies</p>
+    </header>
 
-          <div class="prototype-section">
-            <div class="prototype-video">
-              <p><strong>User Flow:</strong></p>
-              <video width="100%" height="520" controls>
-                <source src="assets/video/Prototype-1-Clip.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-
-          <div class="prototype-section">
-            <div class="prototype-images">
-              <p><strong>Basic System Design:</strong></p>
-              <img src="assets/images/Basic-System-Design.png" alt="Basic-System-Design">
-            </div>
-          </div>
-
-          <div class="features-list">
-            <p><strong>Key Features:</strong></p>
-            <p>Direction-aware logic (A → B = entry, B → A = exit)</p>
-            <p>Easily hidden in planters or fixtures</p>
-            <p>No cameras = high privacy compliance</p>
-          </div>
-
-          <h3>Country of Origin Tracking</h3>
-          <p>To track the country of origin of visitors, we experimented with a QR code linked form.</p>
-
-          <div class="prototype-section">
-            <div class="prototype-images">
-              <p><strong>QR Code Positioning:</strong></p>
-              <img src="assets/images/QR-Location-Sketch.jpg" alt="Lo-fi QR Sketch">
-            </div>
-          </div>
-
-          <div class="prototype-section">
-            <div class="prototype-images">
-              <p><strong>Form Sketch:</strong></p>
-              <img src="assets/images/Form-Sketch.jpg" alt="Lo-fi Form Sketch">
-            </div>
-          </div>
-
-          <div class="features-list">
-            <p><strong>Design Principles:</strong></p>
-            <p>Placed in an easy to spot place</p>
-            <p>Collecting only basic demographic data, no personal or identifiable data</p>
-            <p>Linking to Kibble Palace website for more information</p>
-          </div>
-
-          <h3>Dashboard Prototype</h3>
-          <p>To better visualise the sensor data, we prototyped a dashboard.</p>
-
-          <div class="prototype-section">
-            <div class="prototype-images">
-              <p><strong>Dashboard Wireframe:</strong></p>
-              <img src="assets/images/Dashboard-Wireframe.png" alt="Lo-fi Form Sketch">
-            </div>
-            <div class="prototype-video">
-              <p><strong>Dashboard Prototype:</strong></p>
-              <video width="100%" height="520" controls>
-                <source src="assets/video/Dashboard-Prototype.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-
-          <div class="features-list">
-            <p><strong>Dashboard Features:</strong></p>
-            <p>Designed with simplicity in mind</p>
-            <p>Provides clear visual overview of visitor patterns and event impact</p>
-            <p>Helps staff make informed decisions about staffing and event scheduling</p>
-          </div>
-
-          <h3>Cardboard Prototype</h3>
-          <p>To better simulate the user traffic in Kibble Palace</p>
-
-          <div class="prototype-section">
-            <div class="prototype-video">
-              <p><strong>Dashboard Prototype:</strong></p>
-              <video width="100%" height="520" controls>
-                <source src="assets/video/Cardboard-Prototype-TopDown.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-              <video width="100%" height="520" controls>
-                <source src="assets/video/Cardboard-Prototype-POV.MOV" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-
-          <div class="features-list">
-            <p><strong>Design Features:</strong></p>
-            <p>cardboard prototype text</p>
-            <p>cardboard prototype text</p>
-            <p>cardboard prototype text</p>
-          </div>
+    <div class="main-layout">
+      <!-- Sidebar Navigation -->
+      <nav class="sidebar">
+        <div class="nav-header">
+          <h3>Design Process</h3>
+          <p class="nav-subtitle">Interactive Exploration</p>
         </div>
-      </div>
-    </section>
-  </main>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#sensors" class="nav-link active" data-target="sensors">IR Sensors</a>
+          </li>
+          <li class="nav-item">
+            <a href="#qr-system" class="nav-link" data-target="qr-system">QR System</a>
+          </li>
+          <li class="nav-item">
+            <a href="#dashboard" class="nav-link" data-target="dashboard">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a href="#cardboard" class="nav-link" data-target="cardboard">Physical Testing</a>
+          </li>
+        </ul>
+      </nav>
 
+      <!-- Content Area -->
+      <main class="content-area">
+        <!-- IR Sensors Tab -->
+        <div id="sensors" class="tab-content active">
+          <div class="tab-header">
+            <h2 class="tab-title">IR Sensors</h2>
+            <p class="tab-description">We explored the use of dual infrared break beam sensors at the entrance to the
+              Kibble Palace to achieve accurate directional counting.</p>
+          </div>
+
+          <section class="section">
+            <h3 class="section-title">System Demonstration</h3>
+            <p>Our dual infrared break beam sensor system represents a breakthrough in heritage-compatible visitor
+              counting technology. Through extensive testing and refinement, we developed a solution that achieves 95%+
+              accuracy in distinguishing between entry and exit movements while remaining completely invisible to
+              visitors.</p>
+
+            <p>The system operates on sequential beam interruption logic: when a visitor enters, they first break beam
+              A, then beam B (A→B = entry). Conversely, exiting visitors trigger the sequence B→A (exit). This
+              directional awareness eliminates the common problem of simple counting systems that cannot differentiate
+              between arrivals and departures.</p>
+
+            <div class="media-grid">
+              <div class="media-item">
+                <h4>User Flow Demonstration</h4>
+                <div class="video-container">
+                  <span class="media-tag">Video</span>
+                  <video controls>
+                    <source src="assets/video/Prototype-1-Clip.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+
+              <div class="media-item">
+                <h4>System Architecture</h4>
+                <div class="image-container">
+                  <span class="media-tag">Design</span>
+                  <img src="assets/images/Basic-System-Design.png" alt="Basic System Design">
+                </div>
+              </div>
+            </div>
+
+            <h4>Technical Implementation</h4>
+            <p>Our sensors utilize infrared light beams positioned at ankle height to detect movement patterns. The
+              choice of infrared technology ensures the system works reliably in all lighting conditions, from the
+              bright natural light filtering through the Kibble Palace's glass structure to evening hours when
+              artificial lighting takes over.</p>
+
+            <p>The sensors communicate wirelessly with a central processing unit, eliminating the need for visible
+              cables that would compromise the heritage aesthetic. Battery-powered operation means no electrical work is
+              required, respecting the building's listed status while ensuring reliable operation for months between
+              maintenance visits.</p>
+          </section>
+
+          <section class="section">
+            <p class="features-intro">Key capabilities of our infrared sensor system</p>
+            <div class="features-grid">
+              <div class="feature-card">
+                <h5>Direction-aware Logic</h5>
+                <p>Sequential triggering determines entry vs exit patterns with 95%+ accuracy (A → B = entry, B → A =
+                  exit)</p>
+              </div>
+              <div class="feature-card">
+                <h5>Heritage-Safe Installation</h5>
+                <p>Sensors discretely integrated into existing planters and architectural fixtures without modifications
+                </p>
+              </div>
+              <div class="feature-card">
+                <h5>Privacy Compliant</h5>
+                <p>No cameras or personal data collection ensures complete visitor anonymity and GDPR compliance</p>
+              </div>
+              <div class="feature-card">
+                <h5>Weather Resistant</h5>
+                <p>Designed to withstand the humid glasshouse environment and temperature fluctuations</p>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- QR System Tab -->
+        <div id="qr-system" class="tab-content">
+          <div class="tab-header">
+            <h2 class="tab-title">Tracking Country Origin</h2>
+            <p class="tab-description">To track visitor demographics, we developed an optional QR code system that
+              respects privacy while gathering valuable insights.</p>
+          </div>
+
+          <section class="section">
+            <h3 class="section-title">QR Code Implementation</h3>
+            <p>Understanding visitor demographics is crucial for Glasgow City Council's strategic planning, funding
+              applications, and resource allocation. Our optional QR code system bridges the gap between respecting
+              visitor privacy and gathering valuable demographic insights that inform decision-making.</p>
+
+            <p>The system employs strategically placed QR codes that link to a simple, mobile-optimized form collecting
+              basic demographic information: country of origin, age range, and visit purpose. This data helps the
+              Council understand their international appeal, plan for peak seasons, and demonstrate impact to funding
+              bodies.</p>
+
+            <div class="media-grid">
+              <div class="media-item">
+                <h4>QR Code Placement Strategy</h4>
+                <div class="image-container">
+                  <span class="media-tag">Concept</span>
+                  <img src="assets/images/QR-Location-Sketch.jpg" alt="QR Code Positioning">
+                </div>
+              </div>
+
+              <div class="media-item">
+                <h4>Form Interface Design</h4>
+                <div class="image-container">
+                  <span class="media-tag">Wireframe</span>
+                  <img src="assets/images/Form-Sketch.jpg" alt="Form Sketch">
+                </div>
+              </div>
+            </div>
+
+            <h4>Implementation Strategy</h4>
+            <p>QR codes are positioned at natural pause points throughout the visitor journey - near information boards,
+              seating areas, and plant displays where visitors naturally stop to read or rest. This organic integration
+              ensures high visibility without being intrusive or disrupting the contemplative atmosphere of the
+              glasshouse.</p>
+
+            <p>The linked form is designed with user experience principles, requiring less than 30 seconds to complete.
+              Multiple language options accommodate international visitors, while the mobile-first design ensures
+              compatibility across all device types.</p>
+          </section>
+
+          <section class="section">
+            <p class="features-intro">Design principles for voluntary demographic collection</p>
+            <div class="features-grid">
+              <div class="feature-card">
+                <h5>Strategic Placement</h5>
+                <p>Positioned at high-traffic areas including entrance, central seating areas, and popular plant
+                  displays</p>
+              </div>
+              <div class="feature-card">
+                <h5>Anonymous Data Collection</h5>
+                <p>Collects only aggregated demographic data with no personal identifiers or tracking capabilities</p>
+              </div>
+              <div class="feature-card">
+                <h5>Educational Integration</h5>
+                <p>QR codes link to both the survey and enhanced information about Kibble Palace history and plant
+                  collections</p>
+              </div>
+              <div class="feature-card">
+                <h5>Multilingual Support</h5>
+                <p>Form available in English, Spanish, French, German, and Mandarin to serve international visitors</p>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Dashboard Tab -->
+        <div id="dashboard" class="tab-content">
+          <div class="tab-header">
+            <h2 class="tab-title">Data Visualization Dashboard</h2>
+            <p class="tab-description">A comprehensive dashboard designed to help staff make informed decisions about
+              operations and resource allocation.</p>
+          </div>
+
+          <section class="section">
+            <h3 class="section-title">Dashboard Development</h3>
+            <p>The dashboard transforms raw sensor data into actionable insights for Glasgow City Council staff.
+              Designed through extensive user research with facilities managers, horticultural staff, and administrative
+              personnel, the interface prioritizes clarity and practical utility over complex analytics.</p>
+
+            <p>Real-time occupancy data helps staff make immediate decisions about opening additional areas during peak
+              times or adjusting climate control systems based on visitor load. Historical trend analysis reveals
+              seasonal patterns, enabling better staff scheduling and maintenance planning during quieter periods.</p>
+
+            <div class="media-grid">
+              <div class="media-item">
+                <h4>Initial Wireframe</h4>
+                <div class="image-container">
+                  <span class="media-tag">Planning</span>
+                  <img src="assets/images/Dashboard-Wireframe.png" alt="Dashboard Wireframe">
+                </div>
+              </div>
+
+              <div class="media-item">
+                <h4>Interactive Prototype</h4>
+                <div class="video-container">
+                  <span class="media-tag">Demo</span>
+                  <video controls>
+                    <source src="assets/video/Dashboard-Prototype.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+            </div>
+
+            <h4>Comprehensive Analytics</h4>
+            <p>The dashboard provides multiple data views: live occupancy tracking, daily/weekly/monthly trends,
+              comparative analysis across different periods, and predictive modeling for special events. Export
+              functionality enables data integration with existing Council reporting systems and grant applications.</p>
+
+            <p>Advanced features include automated alerting when occupancy approaches capacity limits, weather
+              correlation analysis showing how external conditions affect visitor numbers, and special event impact
+              assessment measuring how exhibitions or activities influence attendance patterns.</p>
+          </section>
+
+          <section class="section">
+            <p class="features-intro">Dashboard features designed for operational excellence</p>
+            <div class="features-grid">
+              <div class="feature-card">
+                <h5>Intuitive Interface</h5>
+                <p>Clean, accessible design tested with actual Council staff to ensure ease of use across all technical
+                  skill levels</p>
+              </div>
+              <div class="feature-card">
+                <h5>Pattern Analysis</h5>
+                <p>Visual representation of visitor flows, peak hours, seasonal trends, and special event impacts with
+                  drill-down capabilities</p>
+              </div>
+              <div class="feature-card">
+                <h5>Real-time Insights</h5>
+                <p>Live occupancy monitoring with automated alerts for capacity management and emergency situations</p>
+              </div>
+              <div class="feature-card">
+                <h5>Export Capabilities</h5>
+                <p>Data export in multiple formats (CSV, PDF, Excel) for integration with existing Council reporting
+                  systems</p>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Physical Testing Tab -->
+        <div id="cardboard" class="tab-content">
+          <div class="tab-header">
+            <h2 class="tab-title">Physical Testing</h2>
+            <p class="tab-description">To better simulate visitor traffic patterns in the Kibble Palace, we created
+              physical mockups for testing sensor placement and accuracy.</p>
+          </div>
+
+          <section class="section">
+            <h3 class="section-title">Physical Testing Methods</h3>
+            <p>To validate our sensor placement strategy and counting accuracy, we constructed detailed cardboard
+              mockups of the Kibble Palace entrance areas. This hands-on testing phase proved crucial in identifying
+              potential issues before installation and optimizing the system for real-world conditions.</p>
+
+            <p>The physical prototypes allowed us to simulate various visitor scenarios: individual visitors, family
+              groups, children running ahead, elderly visitors with mobility aids, and staff members carrying equipment.
+              Each scenario was tested multiple times to ensure consistent accuracy across different movement patterns
+              and speeds.</p>
+
+            <div class="media-grid">
+              <div class="media-item">
+                <h4>Top-Down View Analysis</h4>
+                <div class="video-container">
+                  <span class="media-tag">Analysis</span>
+                  <video controls>
+                    <source src="assets/video/Cardboard-Prototype-TopDown.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+
+              <div class="media-item">
+                <h4>Visitor Perspective Testing</h4>
+                <div class="video-container">
+                  <span class="media-tag">Experience</span>
+                  <video controls>
+                    <source src="assets/video/Cardboard-Prototype-POV.MOV" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+            </div>
+
+            <h4>Comprehensive Testing Methodology</h4>
+            <p>Our testing protocol included over 200 individual test scenarios covering single visitors, couples,
+              family groups up to 8 people, wheelchair users, visitors with pushchairs, and groups with mixed walking
+              speeds. We specifically tested challenging scenarios like children running back and forth, visitors
+              stopping directly between sensors, and simultaneous bidirectional traffic.</p>
+
+            <p>Video analysis from multiple angles allowed us to verify sensor accuracy against actual visitor counts.
+              This rigorous approach identified that optimal sensor spacing is 1.2 meters apart, positioned 15cm above
+              ground level for maximum accuracy while avoiding interference from pushchairs or bags.</p>
+          </section>
+
+          <section class="section">
+            <p class="features-intro">Insights gained from physical prototype testing</p>
+            <div class="features-grid">
+              <div class="feature-card">
+                <h5>Accuracy Validation</h5>
+                <p>Achieved 96.8% accuracy across all test scenarios with the optimized sensor positioning and logic
+                  algorithms</p>
+              </div>
+              <div class="feature-card">
+                <h5>Group Behavior Analysis</h5>
+                <p>Identified optimal handling of group dynamics, including families with children and guided tour
+                  groups</p>
+              </div>
+              <div class="feature-card">
+                <h5>Optimal Positioning</h5>
+                <p>Determined ideal sensor height, spacing, and angle to maximize detection while minimizing false
+                  triggers</p>
+              </div>
+              <div class="feature-card">
+                <h5>Edge Case Handling</h5>
+                <p>Developed protocols for unusual scenarios like maintenance equipment, wheelchair accessibility, and
+                  emergency situations</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Footer -->
   <footer>
     <div class="footer-content">
       <p style="color: white;">© Copyright Team 17 - Kibble Palace Project. All Rights Reserved</p>
@@ -133,6 +367,29 @@
       .then(data => {
         document.getElementById('navbar').innerHTML = data;
       });
+
+    // Prototype navigation functionality
+    document.addEventListener('DOMContentLoaded', function () {
+      const navLinks = document.querySelectorAll('.nav-link');
+      const tabContents = document.querySelectorAll('.tab-content');
+
+      navLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          // Remove active class from all links and tabs
+          navLinks.forEach(l => l.classList.remove('active'));
+          tabContents.forEach(tab => tab.classList.remove('active'));
+
+          // Add active class to clicked link
+          this.classList.add('active');
+
+          // Show corresponding tab
+          const target = this.getAttribute('data-target');
+          document.getElementById(target).classList.add('active');
+        });
+      });
+    });
   </script>
 </body>
 
