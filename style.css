@@ -98,7 +98,7 @@ nav a:hover::after {
 /* Hero Section */
 .hero-section {
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url('assets/images/botanic1.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url('assets/images/botanicpic3.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -206,7 +206,7 @@ main {
 /* Image Section */
 .image-section {
   height: 60vh;
-  background: linear-gradient(rgba(42, 74, 58, 0.6), rgba(85, 139, 110, 0.4)), url('assets/images/botanic2.jpg');
+  background: linear-gradient(rgba(42, 74, 58, 0.6), rgba(85, 139, 110, 0.4)), url('assets/images/botanicpic2.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
