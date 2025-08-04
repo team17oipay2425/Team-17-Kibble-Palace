@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -52,6 +53,11 @@ body {
   color: #888;
 }
 
+.topbar span {
+  font-weight: bold;
+  color: #1d3557;
+}
+
 main {
   padding: 20px;
   background-color: #f9fbfc;
@@ -70,6 +76,23 @@ main {
   border-radius: 10px;
   font-size: 18px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.card.highlight {
+  background-color: #1d3557;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  transition: 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .charts {
@@ -119,3 +142,9 @@ canvas {
   gap: 20px;
 }
 
+.subtext {
+  font-size: 13px;
+  color: #666;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
