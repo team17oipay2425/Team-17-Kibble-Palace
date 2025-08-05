@@ -6,6 +6,180 @@
   <title>Prototype</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Enhanced styles for proper media formatting */
+    .media-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      margin: 2rem 0;
+    }
+
+    /* Always keep videos stacked vertically for better visibility */
+    .media-grid {
+      grid-template-columns: 1fr !important;
+    }
+
+    .media-item {
+      position: relative;
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 253, 249, 0.8) 100%);
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 15px 40px rgba(85, 139, 110, 0.12);
+      transition: all 0.3s ease;
+      border: 1px solid rgba(85, 139, 110, 0.08);
+    }
+
+    .media-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 60px rgba(85, 139, 110, 0.18);
+    }
+
+    .media-item p {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #2a4a3a;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .media-tag {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: linear-gradient(135deg, #558b6e, #9ca77d);
+      color: white;
+      padding: 0.5rem 1.2rem;
+      border-radius: 25px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      z-index: 10;
+      box-shadow: 0 4px 15px rgba(85, 139, 110, 0.3);
+    }
+
+    .video-container,
+    .image-container {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(85, 139, 110, 0.2);
+      background: #ffffff;
+      padding: 1rem;
+    }
+
+    .video-container video {
+      width: 100%;
+      height: auto;
+      min-height: 400px;
+      max-height: 600px;
+      border-radius: 12px;
+      background: #000;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: auto;
+      min-height: 400px;
+      max-height: 700px;
+      object-fit: contain;
+      border-radius: 12px;
+      background: white;
+      padding: 1rem;
+    }
+
+    /* Special handling for dashboard wireframe and prototype images */
+    .dashboard-wireframe img,
+    .dashboard-prototype img {
+      min-height: 500px;
+      max-height: 800px;
+      object-fit: contain;
+      background: white;
+      padding: 2rem;
+    }
+
+    /* Physical testing video containers */
+    .cardboard-video {
+      margin: 3rem 0;
+    }
+
+    .cardboard-video .video-container {
+      background: #f8f9fa;
+      padding: 2rem;
+    }
+
+    .cardboard-video video {
+      width: 100%;
+      height: auto;
+      min-height: 350px;
+      max-height: 500px;
+      border-radius: 12px;
+    }
+
+    /* Enhanced feature cards */
+    .feature-card {
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 253, 249, 0.8) 100%);
+      border-radius: 20px;
+      padding: 2.5rem;
+      position: relative;
+      transition: all 0.4s ease;
+      border: 1px solid rgba(85, 139, 110, 0.1);
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+    }
+
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #558b6e, #9ca77d);
+    }
+
+    .feature-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(85, 139, 110, 0.15);
+    }
+
+    .feature-card h5 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #2a4a3a;
+      margin-bottom: 1rem;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .feature-card p {
+      color: #4a6a5a;
+      font-size: 1rem;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .media-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .media-item {
+        padding: 2rem;
+      }
+
+      .video-container video,
+      .image-container img {
+        min-height: 300px;
+        max-height: 500px;
+      }
+
+      .cardboard-video video {
+        min-height: 250px;
+        max-height: 400px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -167,7 +341,6 @@
               </div>
             </div>
 
-
             <h4>Implementation Strategy</h4>
             <p>QR codes are positioned at natural pause points throughout the visitor journey - near information boards,
               seating areas, and plant displays where visitors naturally stop to read or rest. This organic integration
@@ -223,7 +396,7 @@
               seasonal patterns, enabling better staff scheduling and maintenance planning during quieter periods.</p>
 
             <div class="media-grid">
-              <div class="media-item">
+              <div class="media-item dashboard-wireframe">
                 <p><strong>Initial Wireframe</strong></p>
                 <div class="image-container">
                   <span class="media-tag">Planning</span>
@@ -231,7 +404,7 @@
                 </div>
               </div>
 
-              <div class="media-item">
+              <div class="media-item dashboard-prototype">
                 <p><strong>Interactive Prototype</strong></p>
                 <div class="video-container">
                   <span class="media-tag">Demo</span>
@@ -299,7 +472,7 @@
               and speeds.</p>
 
             <div class="media-grid">
-              <div class="media-item">
+              <div class="media-item cardboard-video">
                 <p><strong>Top-Down View Analysis</strong></p>
                 <div class="video-container">
                   <span class="media-tag">Analysis</span>
@@ -310,7 +483,7 @@
                 </div>
               </div>
 
-              <div class="media-item">
+              <div class="media-item cardboard-video">
                 <p><strong>Visitor Perspective Testing</strong></p>
                 <div class="video-container">
                   <span class="media-tag">Experience</span>
