@@ -225,6 +225,10 @@ main {
 .image-content {
   max-width: 700px;
   padding: 0 2rem;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto; /* Center the block within its grid cell */
+  justify-self: center; /* Center the grid item within its grid area */
 }
 
 .image-content h2 {
@@ -1168,6 +1172,8 @@ p {
   .text-image-flow.reverse {
     grid-template-columns: 1fr;
     gap: 3rem;
+    align-items: center;
+    text-align: center;
   }
 
   .solution-grid {
