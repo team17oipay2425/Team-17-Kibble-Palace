@@ -544,12 +544,6 @@
   </footer>
 
   <script>
-    fetch('nav.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('navbar').innerHTML = data;
-      });
-
     // Prototype navigation functionality
     document.addEventListener('DOMContentLoaded', function () {
       const navLinks = document.querySelectorAll('.nav-link');
@@ -573,6 +567,7 @@
       });
     });
   </script>
+  <script src="nav.js"></script>
 </body>
 
 </html>

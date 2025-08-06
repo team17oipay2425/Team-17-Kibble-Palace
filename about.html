@@ -6,49 +6,116 @@
   <title>About Us</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Styles to ensure media items format correctly on this page */
+    .media-item {
+      position: relative;
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 253, 249, 0.8) 100%);
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 15px 40px rgba(85, 139, 110, 0.12);
+      transition: all 0.3s ease;
+      border: 1px solid rgba(85, 139, 110, 0.08);
+    }
+
+    .media-item p {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #2a4a3a;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    
+    .image-container {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(85, 139, 110, 0.2);
+      background: #ffffff;
+      padding: 1rem;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+    
+    .final-content-area {
+      padding: 3rem 0;
+    }
+  </style>
 </head>
 
 <body>
   <div id="navbar"></div>
+  <div class="bg-decoration"></div>
 
-  <main>
-    <section class="content-flow">
-      <div class="content-wrapper">
-        <h2>About Our Team</h2>
-        <div class="about-content">
-          <p class="large-text">Team members: Fan Xinyu, Tay Rui Qi, Chew Liang Zhi, Elroy Lee, Ng Quan Han, Goh
-            Jia Rui Gary</p>
+  <div class="container">
+    <header class="header">
+      <h1>About Our Team</h1>
+      <p>Meet the student designers and developers behind the Kibble Palace Footfall Tracking Project.</p>
+    </header>
 
-          <p>group picture here after</p>
-          <p>We're a group of student designers and developers focused on creating meaningful, low-cost solutions for
-            real-world problems. Our diverse backgrounds in engineering, design, and technology allow us to approach
-            challenges from multiple perspectives.</p>
+    <main class="final-content-area">
 
-          <p><strong>Our Mission:</strong><br>To deliver an accurate, user-centred footfall tracking system that
-            respects the heritage and design of the Kibble Palace while providing valuable insights for facility
-            management.</p>
+      <p class="large-text" style="text-align: center; max-width: 900px; margin: 0 auto 3rem auto;">
+        We are Team 17: Fan Xinyu, Tay Rui Qi, Chew Liang Zhi, Elroy Lee, Ng Quan Han, and Goh Jia Rui Gary. As a group of student designers and developers, we are focused on creating meaningful, low-cost solutions for real-world problems.
+      </p>
 
-          <p>Throughout this project, we've learned the importance of balancing technological innovation with heritage
-            preservation, ensuring that our solutions enhance rather than compromise the historical significance of this
-            magnificent Victorian glasshouse.</p>
+      <div class="text-image-flow" style="margin-top: 4rem;">
+        <div class="text-content">
+          <h3 style="text-align: left; font-size: 2.2rem;">Our Journey</h3>
+          <p>Our diverse backgrounds in engineering, design, and technology allowed us to approach this challenge from multiple perspectives. Throughout this project, we've learned the importance of balancing technological innovation with heritage preservation.</p>
+          <p>Our goal was to ensure our solution would enhance rather than compromise the historical significance of the magnificent Kibble Palace, creating a system that is both effective and respectful.</p>
+        </div>
+        <div class="image-content">
+          <div class="media-item">
+            <p><strong>Team 17 at the Kibble Palace</strong></p>
+            <div class="image-container">
+              <img src="" alt="Group Photo">
+            </div>
+          </div>
         </div>
       </div>
-    </section>
-  </main>
+
+      <div class="overall-impact" style="margin-top: 5rem;">
+          <h3>Our Mission</h3>
+          <p class="large-text">To deliver an accurate, user-centred footfall tracking system that respects the heritage and design of the Kibble Palace while providing valuable insights for facility management.</p>
+      </div>
+
+      <section class="section" style="margin-top: 5rem;">
+        <h3 style="text-align: center; font-size: 2.2rem; margin-bottom: 3rem;">Our Approach</h3>
+        <div class="features-grid">
+          <div class="feature-card">
+            <h5>User-Centred Design</h5>
+            <p>We placed the needs of Glasgow City Council and Kibble Palace visitors at the heart of our process through interviews and direct feedback.</p>
+          </div>
+          <div class="feature-card">
+            <h5>Heritage-First Technology</h5>
+            <p>Our primary rule was that technology must serve and protect the heritage of the site. This led to our non-invasive, discreet solution.</p>
+          </div>
+          <div class="feature-card">
+            <h5>Iterative Prototyping</h5>
+            <p>We believe in building, testing, and learning. Our physical and digital prototypes were crucial for refining our system's accuracy and usability.</p>
+          </div>
+          <div class="feature-card">
+            <h5>Collaborative Spirit</h5>
+            <p>Our diverse skills in engineering and design allowed us to tackle challenges from every angle, leading to a more robust final product.</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
 
   <footer>
     <div class="footer-content">
       <p style="color: white;">© Copyright Team 17 - Kibble Palace Project. All Rights Reserved</p>
     </div>
   </footer>
-
-  <script>
-    fetch('nav.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('navbar').innerHTML = data;
-      });
-  </script>
+  <script src="nav.js"></script>
 </body>
 
 </html>
