@@ -1674,3 +1674,26 @@ p {
   font-size: 0.9rem;
   margin: 0;
 }
+
+/* Dailies specific overrides for image and poster containers to match prototype media-item styling */
+.media-item img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  background: white;
+}
+
+.poster-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.poster-container img {
+  max-width: 800px;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(85, 139, 110, 0.12);
+  background: white;
+}
