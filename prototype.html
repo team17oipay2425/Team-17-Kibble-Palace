@@ -516,7 +516,7 @@
             <div class="features-grid">
               <div class="feature-card">
                 <h5>Accuracy Validation</h5>
-                <p>Achieved 96.8% accuracy across all test scenarios with the optimised sensor positioning and logic
+                <p>Achieved high accuracy across all test scenarios with the optimised sensor positioning and logic
                   algorithms</p>
               </div>
               <div class="feature-card">
@@ -548,15 +548,25 @@
     </div>
   </footer>
 
+  <script src="nav.js"></script>
   <script>
     // Prototype navigation functionality
     document.addEventListener('DOMContentLoaded', function () {
       const navLinks = document.querySelectorAll('.nav-link');
       const tabContents = document.querySelectorAll('.tab-content');
+      const contentArea = document.querySelector('.content-area');
 
       navLinks.forEach(link => {
         link.addEventListener('click', function (e) {
           e.preventDefault();
+
+          // Scroll the content area to the top of the viewport
+          if (contentArea) {
+            // Using a slight delay to ensure the content is rendered before scrolling
+            setTimeout(() => {
+              contentArea.scrollIntoView({ behavior: 'smooth' });
+            }, 100);
+          }
 
           // Remove active class from all links and tabs
           navLinks.forEach(l => l.classList.remove('active'));
@@ -572,7 +582,6 @@
       });
     });
   </script>
-  <script src="nav.js"></script>
 </body>
 
 </html>
