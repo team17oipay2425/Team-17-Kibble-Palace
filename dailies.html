@@ -29,21 +29,7 @@
       background: white;
       padding: 1rem;
     }
-
-    .image-container .media-tag {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      background: linear-gradient(135deg, #558b6e, #9ca77d);
-      color: white;
-      padding: 0.4rem 1rem;
-      border-radius: 20px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      z-index: 10;
-      box-shadow: 0 4px 15px rgba(85, 139, 110, 0.3);
-    }
-
+    
     .poster-container {
       margin: 2rem 0;
       text-align: center;
@@ -57,6 +43,99 @@
       box-shadow: 0 20px 60px rgba(85, 139, 110, 0.2);
       background: white;
       padding: 1rem;
+    }
+    
+    /* STYLES FOR VIDEO & POSTER CARDS */
+    .media-item {
+      position: relative;
+      margin: 2rem 0;
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 253, 249, 0.8) 100%);
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 15px 40px rgba(85, 139, 110, 0.12);
+      transition: all 0.3s ease;
+      border: 1px solid rgba(85, 139, 110, 0.08);
+    }
+    .media-item p {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #2a4a3a;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+    .video-container {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(85, 139, 110, 0.2);
+    }
+    .media-tag {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: linear-gradient(135deg, #558b6e, #9ca77d);
+      color: white;
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      z-index: 10;
+      box-shadow: 0 4px 15px rgba(85, 139, 110, 0.3);
+    }
+
+    /* ---- TIMELINE STYLES ---- */
+    .timeline {
+      position: relative;
+      padding-left: 50px;
+      border-left: 3px solid #d4edd6;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 3rem;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 1rem;
+    }
+
+    .timeline-marker {
+      position: absolute;
+      top: 5px;
+      left: -64px;
+      width: 25px;
+      height: 25px;
+      background: #fff;
+      border: 4px solid #558b6e;
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px #ecf7ee;
+      z-index: 2;
+    }
+
+    .timeline-content {
+      position: relative;
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 253, 249, 0.8) 100%);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 10px 30px rgba(85, 139, 110, 0.1);
+      border: 1px solid rgba(85, 139, 110, 0.1);
+      transition: all 0.3s ease;
+    }
+    .timeline-content:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(85, 139, 110, 0.15);
+    }
+
+    .timeline-content h4 {
+      font-family: 'Playfair Display', serif;
+      color: #2a4a3a;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    .timeline-content ul {
+        list-style-position: inside;
+        padding-left: 1rem;
     }
   </style>
 </head>
@@ -73,7 +152,6 @@
     </header>
 
     <div class="main-layout">
-      <!-- Sidebar Navigation -->
       <nav class="sidebar">
         <ul class="nav-menu">
           <li class="nav-item">
@@ -88,369 +166,383 @@
         </ul>
       </nav>
 
-      <!-- Content Area -->
       <main class="content-area">
-        <!-- Week 1 -->
         <div id="week-1" class="tab-content active">
           <div class="tab-header">
             <h2 class="tab-title">Week 1</h2>
             <p class="tab-description">Initial stakeholder meetings, research, and early prototyping ideas.</p>
           </div>
-
-          <div class="week-section">
-            <div class="daily-entry">
-              <h4>Day 1 - Stakeholder Meeting</h4>
-              <p>
-                On our first day of lecture, the biggest takeaway from Prof. Alaistar was how the way we ask questions
-                about
-                our solution can shape the outcome of our design. Although the team has prepared questions to ask the
-                client
-                during our first meeting, we found that the questions were lacking during the team activity conducted
-                during
-                the lecture with another team and thus improved on it before our stakeholder meeting in the afternoon.
-                Overall,
-                this was a key insight that we carried into our stakeholder meeting with Chrissy from Friends of Glasgow
-                Botanic Gardens.
-              </p>
-              <p>
-                In the afternoon we held our first stakeholder meeting where we met with Chrissy from Friends of Glasgow
-                Botanic Gardens,
-                who provided insights into footfall tracking in the Kibble Palace. She explained the daily operational
-                challenges: with staff
-                struggling to justify resource allocation without concrete visitor data and a distinct lack of usage
-                statistics resulting in weakening funding applications. Through this meeting, we now had an insight on
-                the challenges of accurate footfall counting in a listed building with limited budget and strict
-                modification rules. We also learnt what was the methodology previously used to track footfall up till
-                2016 which was:
-                <li>Manual counting by staff, which was time-consuming and prone to errors.</li>
-                <li>Location pinging using mobile devices carried by visitors, which was inaccurate.</li>
-              </p>
-              <p>
-                Furthermore, the client has also highlighted three key priorities for the solution:
-                <li>Budget Friendly: The cost of the proposed/implemented solution should be as low as zero</li>
-                <li>Accurate: The accuracy of the data recorded using the proposed solution should be as accurate as
-                  possible</li>
-                <li>Compliance with Regulation: The implemented solution should not alter the building appearance in any
-                  way and
-                  should be invisible to visitors if possible</li>
-              <p>
-                Key insights from the meeting: Any solution must be invisible to visitors, along with no structural
-                modifications to the building. Budget constraints are also a significant factor, as well as ensuring
-                that the plants remain unaffected.
-              </p>
-            </div>
-
-            <div class="daily-entry">
-              <h4>Day 2 - Initial Research</h4>
-              <p>
-                On Day 2, we began to brainstorm potential solutions to the footfall tracking problem. As we discussed
-                with the client the day before,
-                we learnt that no existing solutions were in place. This led us to explore various existing footfall
-                tracking solutions and
-                their limitations across similar attractions with one such example being Singapore Botanic Gardens.
-                While there's no concrete evidence of a footfall tracking system at Singapore Botanic Gardens, we
-                discovered that they likely
-                use a combination of voluntary visitor surveys and strategically placed sensors to estimate visitor
-                numbers.
-              </p>
-              <p>
-                Furthermore, we also explored other technical approaches to footfall tracking such as:
-                <li>Thermal imaging and pressure plates - both were dismissed due to high costs, especially pressure
-                  plate installation.</li>
-                <li>Computer Vision - ruled out due to technical complexity and privacy concerns.</li>
-
-              </p>
-              <p>
-                We eventually settled on an IR sensor approach, which would be cost-effective and easy to
-                install without modifying the building structure. The system would allow us to discreetly count foot
-                traffic
-                using discreet IR sensors placed at the entrance, ensuring minimal disruption to the visitor experience.
-              </p>
-            </div>
-
-            <div class="daily-entry">
-              <h4>Day 3 - Ideation Sketches</h4>
-              <p>
-                On Day 3, we focused on sketching out our initial ideas for the IR sensor system. We discussed how
-                the sensors would be positioned at the entrance to accurately count foot traffic without being
-                intrusive.
-                The sketches included the sensor placement and anticipated visitor movement patterns, as well as how the
-                data
-                would be collected and processed
-              </p>
-              <p>
-                After settling on our solution, we started out by creating a lo-fi prototype of using a single IR sensor
-                system. This process allowed us to visualise the limitations of our initial design utilising just 1
-                sensor.
-                We quickly realised that a single sensor would not be sufficient to accurately count foot traffic, as
-                it could not distinguish between entries and exits. We then explored the idea of using two sensors
-                placed in sequence, which would allow us to determine the direction of movement and accurately count
-                foot traffic. We also sketched potential dashboard layouts and discussed data visualisation
-                requirements.
-              </p>
-              <p><strong>Single Sensor Sketch:</strong></p>
-              <div class="image-container">
-                <span class="media-tag">Single Sensor Sketch</span>
-                <img src="assets/images/Single-Sensor-Sketch.jpg" alt="Single Sensor Sketch Wireframe">
-              </div>
-              <p><strong>Single Sensor on Both Doors Sketch:</strong></p>
-              <div class="image-container">
-                <span class="media-tag">Single Sensor on Both Doors Sketch</span>
-                <img src="assets/images/Single-Sensor-Both-Door-Sketch.jpg"
-                  alt="Single Sensor on Both Doors Sketch Wireframe">
+          
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h4>Day 1 - Stakeholder Meeting</h4>
+                <p>
+                  On our first day of lecture, the biggest takeaway from Prof. Alaistar was how the way we ask questions
+                  about our solution can shape the outcome of our design. Although the team has prepared questions to ask the
+                  client during our first meeting, we found that the questions were lacking during the team activity conducted
+                  during the lecture with another team and thus improved on it before our stakeholder meeting in the afternoon.
+                  Overall, this was a key insight that we carried into our stakeholder meeting with Chrissy from Friends of Glasgow
+                  Botanic Gardens.
+                </p>
+                <p>
+                  In the afternoon we held our first stakeholder meeting where we met with Chrissy from Friends of Glasgow
+                  Botanic Gardens, who provided insights into footfall tracking in the Kibble Palace. She explained the daily operational
+                  challenges: with staff struggling to justify resource allocation without concrete visitor data and a distinct lack of usage
+                  statistics resulting in weakening funding applications. Through this meeting, we now had an insight on
+                  the challenges of accurate footfall counting in a listed building with limited budget and strict
+                  modification rules. We also learnt what was the methodology previously used to track footfall up till
+                  2016 which was:
+                </p>
+                <ul>
+                  <li>Manual counting by staff, which was time-consuming and prone to errors.</li>
+                  <li>Location pinging using mobile devices carried by visitors, which was inaccurate.</li>
+                </ul>
+                <p>
+                  Furthermore, the client has also highlighted three key priorities for the solution:
+                </p>
+                <ul>
+                  <li>Budget Friendly: The cost of the proposed/implemented solution should be as low as zero</li>
+                  <li>Accurate: The accuracy of the data recorded using the proposed solution should be as accurate as possible</li>
+                  <li>Compliance with Regulation: The implemented solution should not alter the building appearance in any way and should be invisible to visitors if possible</li>
+                </ul>
+                <p>
+                  Key insights from the meeting: Any solution must be invisible to visitors, along with no structural
+                  modifications to the building. Budget constraints are also a significant factor, as well as ensuring
+                  that the plants remain unaffected.
+                </p>
               </div>
             </div>
 
-            <div class="daily-entry">
-              <h4>Day 4 - Reflecting on Client Insights and Prototyping</h4>
-              <p>For day 4, we developed and recorded our first pitch video to communicate our initial solution for
-                footfall
-                tracking at the Kibble Palace. This process pushed us to organise our ideas clearly and reflect more
-                deeply on
-                our design decisions so far.
-              </p>
-              <p>While structuring the video, we revisited our client interviews and re-evaluated our assumptions.
-                Initially, we
-                assumed that a high-tech system was expected from us, however our client emphasised that their budget
-                constraints and
-                listed building status made it difficult to pursue that route.
-              </p>
-              <p>From a design perspective, this phase helped us move beyond abstract ideation into tangible planning:
-                <li>We began defining key requirements: low-cost, non-intrusive and data privacy friendly.</li>
-                <li>We outlined a basic prototype on paper involving dual sensor logic, and introduced the idea of an
-                  optional
-                  QR code form for demographic insights.
-                </li>
-              </p>
-              <p>Producing the pitch also highlighted key gaps in our early design. For example while our idea was
-                technically viable,
-                we hadn't yet addressed how the system would process and visualise the data. Such issues were flagged
-                during team discussions
-                and would guide our prototyping in the coming days.
-              </p>
-              <p>Finally, the act of visualising the solution through paper sketches helped us communicate the concept
-                more clearly. Reinforcing
-                our understanding that good design requires functional logic and accessible storytelling.
-              </p>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h4>Day 2 - Initial Research</h4>
+                <p>
+                  On Day 2, we began to brainstorm potential solutions to the footfall tracking problem. As we discussed
+                  with the client the day before, we learnt that no existing solutions were in place. This led us to explore various existing footfall
+                  tracking solutions and their limitations across similar attractions with one such example being Singapore Botanic Gardens.
+                  While there's no concrete evidence of a footfall tracking system at Singapore Botanic Gardens, we
+                  discovered that they likely use a combination of voluntary visitor surveys and strategically placed sensors to estimate visitor
+                  numbers.
+                </p>
+                <p>
+                  Furthermore, we also explored other technical approaches to footfall tracking such as:
+                </p>
+                <ul>
+                  <li>Thermal imaging and pressure plates - both were dismissed due to high costs, especially pressure plate installation.</li>
+                  <li>Computer Vision - ruled out due to technical complexity and privacy concerns.</li>
+                </ul>
+                <p>
+                  We eventually settled on an IR sensor approach, which would be cost-effective and easy to
+                  install without modifying the building structure. The system would allow us to discreetly count foot
+                  traffic using discreet IR sensors placed at the entrance, ensuring minimal disruption to the visitor experience.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h4>Day 3 - Ideation Sketches</h4>
+                <p>
+                  On Day 3, we focused on sketching out our initial ideas for the IR sensor system. We discussed how
+                  the sensors would be positioned at the entrance to accurately count foot traffic without being
+                  intrusive. The sketches included the sensor placement and anticipated visitor movement patterns, as well as how the
+                  data would be collected and processed.
+                </p>
+                <p>
+                  After settling on our solution, we started out by creating a lo-fi prototype of using a single IR sensor
+                  system. This process allowed us to visualise the limitations of our initial design utilising just 1
+                  sensor. We quickly realised that a single sensor would not be sufficient to accurately count foot traffic, as
+                  it could not distinguish between entries and exits. We then explored the idea of using two sensors
+                  placed in sequence, which would allow us to determine the direction of movement and accurately count
+                  foot traffic. We also sketched potential dashboard layouts and discussed data visualisation
+                  requirements.
+                </p>
+                <p><strong>Single Sensor Sketch:</strong></p>
+                <div class="image-container">
+                  <span class="media-tag">Single Sensor Sketch</span>
+                  <img src="assets/images/Single-Sensor-Sketch.jpg" alt="Single Sensor Sketch Wireframe">
+                </div>
+                <p><strong>Single Sensor on Both Doors Sketch:</strong></p>
+                <div class="image-container">
+                  <span class="media-tag">Single Sensor on Both Doors Sketch</span>
+                  <img src="assets/images/Single-Sensor-Both-Door-Sketch.jpg"
+                    alt="Single Sensor on Both Doors Sketch Wireframe">
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h4>Day 4 - Reflecting on Client Insights and Prototyping</h4>
+                <p>For day 4, we developed and recorded our first pitch video to communicate our initial solution for
+                  footfall tracking at the Kibble Palace. This process pushed us to organise our ideas clearly and reflect more
+                  deeply on our design decisions so far.
+                </p>
+                <p>While structuring the video, we revisited our client interviews and re-evaluated our assumptions.
+                  Initially, we assumed that a high-tech system was expected from us, however our client emphasised that their budget
+                  constraints and listed building status made it difficult to pursue that route.
+                </p>
+                <p>From a design perspective, this phase helped us move beyond abstract ideation into tangible planning:
+                </p>
+                <ul>
+                  <li>We began defining key requirements: low-cost, non-intrusive and data privacy friendly.</li>
+                  <li>We outlined a basic prototype on paper involving dual sensor logic, and introduced the idea of an
+                    optional QR code form for demographic insights.
+                  </li>
+                </ul>
+                <p>Producing the pitch also highlighted key gaps in our early design. For example while our idea was
+                  technically viable, we hadn't yet addressed how the system would process and visualise the data. Such issues were flagged
+                  during team discussions and would guide our prototyping in the coming days.
+                </p>
+                <p>Finally, the act of visualising the solution through paper sketches helped us communicate the concept
+                  more clearly. Reinforcing our understanding that good design requires functional logic and accessible storytelling.
+                </p>
+                
+                <div class="media-item">
+                  <p><strong>Pitch Video 1</strong></p>
+                  <div class="video-container">
+                    <span class="media-tag">Video</span>
+                    <iframe style="width: 100%; height: 520px; border:0; border-radius: 12px;" src="https://www.youtube.com/embed/ghAql5v1F_Q" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
             </div>  
-            <div class="prototype-video">
-                <p><strong>Pitch Video 1:</strong></p>
-                <iframe width="100%" height="520" src="https://www.youtube.com/embed/ghAql5v1F_Q"
-                  title="YouTube video player" frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen>
-                </iframe>
-            </div>
           </div>
         </div>
 
-        <!-- Week 2 -->
         <div id="week-2" class="tab-content">
           <div class="tab-header">
             <h2 class="tab-title">Week 2</h2>
             <p class="tab-description">Refining prototypes, visitor interviews, and dashboard development.</p>
           </div>
-
-          <div class="week-section">
-            <div class="daily-entry">
-              <h4>Day 5 - Dashboard Prototyping</h4>
-              <p>We focused on designing the dashboard interface for the staff use. Based on the client meeting and
-                understanding of their needs, we prioritised features like real-time visitor counts, daily patterns, and
-                historical data visualisation. We created wireframes for different dashboard views: real-time occupancy
-                display showing current visitor counts, daily summary charts tracking hourly patterns, weekly trend
-                analysis for operational planning, and monthly reports suitable for council presentations and funding
-                applications. </p>
-              <p>We designed the interface to show key metrics at a glance, as well as specialised sections for deeper
-                insights: visitor trends showing daily patterns, country of origin data, as well as event tracking with
-                attendance figures, helping staff to understand which programs drive the most engagement</p>
-              <p>At first, there was some struggles with balancing comprehensive data presentation while still retaining
-                visual clarity. We eventually settled on a clean, spacious layout with large fonts and intuitive color
-                coding, making it easier for staff to digest the information quickly which still providing the detailed
-                analytics needed for strategic planning and reporting.</p>
+          
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h4>Day 5 - Dashboard Prototyping</h4>
+                <p>We focused on designing the dashboard interface for the staff use. Based on the client meeting and
+                  understanding of their needs, we prioritised features like real-time visitor counts, daily patterns, and
+                  historical data visualisation. We created wireframes for different dashboard views: real-time occupancy
+                  display showing current visitor counts, daily summary charts tracking hourly patterns, weekly trend
+                  analysis for operational planning, and monthly reports suitable for council presentations and funding
+                  applications. </p>
+                <p>We designed the interface to show key metrics at a glance, as well as specialised sections for deeper
+                  insights: visitor trends showing daily patterns, country of origin data, as well as event tracking with
+                  attendance figures, helping staff to understand which programs drive the most engagement</p>
+                <p>At first, there was some struggles with balancing comprehensive data presentation while still retaining
+                  visual clarity. We eventually settled on a clean, spacious layout with large fonts and intuitive color
+                  coding, making it easier for staff to digest the information quickly which still providing the detailed
+                  analytics needed for strategic planning and reporting.</p>
+              </div>
             </div>
 
-            <div class="daily-entry">
-              <h4>Day 6 - Interviewing Visitors of Kibble Palace</h4>
-              <p>Today, we visited Kibble Palace to gather feedback from actual visitors about their awareness and
-                thoughts
-                on footfall tracking. Surprisingly, many assumed that there was already a tracking system in place and
-                were
-                unaware that the data was outdated.</p>
-              <p>Most visitors were open to the idea of anonymous tracking if it can help improve the management of the
-                place,
-                especially if it preserves the free entry policy. We explained our concept (IR sensors + QR code form)
-                and the feedback
-                we got was positive provided it remained non-intrusive and didn't feel like surveillance. However, they
-                also highlighted
-                that they would not be incentivised to scan the QR code form as it did not benefit their visit to the
-                Kibble Palace.</p>
-              <p>We also showed them our basic dashboard wireframe to gain some insights on what kind of data visitors
-                would like to see.
-                It was highlighted to us that while the simple nature of our dashboard did not provide enough insights
-                into information that
-                visitors would want to know about. They mentioned information like how events impact the number of
-                people at Kibble Palace would
-                be good to know so they can avoid busy periods.
-              </p>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h4>Day 6 - Interviewing Visitors of Kibble Palace</h4>
+                <p>Today, we visited Kibble Palace to gather feedback from actual visitors about their awareness and
+                  thoughts on footfall tracking. Surprisingly, many assumed that there was already a tracking system in place and
+                  were unaware that the data was outdated.</p>
+                <p>Most visitors were open to the idea of anonymous tracking if it can help improve the management of the
+                  place, especially if it preserves the free entry policy. We explained our concept (IR sensors + QR code form)
+                  and the feedback we got was positive provided it remained non-intrusive and didn't feel like surveillance. However, they
+                  also highlighted that they would not be incentivised to scan the QR code form as it did not benefit their visit to the
+                  Kibble Palace.</p>
+                <p>We also showed them our basic dashboard wireframe to gain some insights on what kind of data visitors
+                  would like to see. It was highlighted to us that while the simple nature of our dashboard did not provide enough insights
+                  into information that visitors would want to know about. They mentioned information like how events impact the number of
+                  people at Kibble Palace would be good to know so they can avoid busy periods.
+                </p>
+              </div>
             </div>
 
-            <div class="daily-entry">
-              <h4>Day 7 - Improving QR Code Form and Dashboard Prototypes</h4>
-              <p>Following the feedback we received from visitors during our interviews at Kibble Palace, we made
-                several
-                improvements to our prototype to enhance user engagement and data utility.</p>
-              <p>Based on the interviews we did yesterday, we made several improvements to the dashboard and QR code
-                form.</p>
-              <p>QR Code Form improvements, many visitors indicated they lacked incentive to complete it. To address
-                this:
-                <li>Added a section that displays fun and lesser-known facts about Kibble Palace after submission</li>
-              </p>
-              <p>On the dashboard side, we integrated new features to make the data more insightful for stakeholders.
-                These includes:
-                <li>Added weather impacts to visitor numbers.</li>
-                <li>Added events and their respective visitor counts.</li>
-                <li>Show weekly and monthly visitor counts.</li>
-              <p>These changes were designed to provide clearer, more actionable insights to inform future decisions.
-              </p>
-              </p>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h4>Day 7 - Improving QR Code Form and Dashboard Prototypes</h4>
+                <p>Following the feedback we received from visitors during our interviews at Kibble Palace, we made
+                  several improvements to our prototype to enhance user engagement and data utility.</p>
+                <p>Based on the interviews we did yesterday, we made several improvements to the dashboard and QR code
+                  form.</p>
+                <p>QR Code Form improvements, many visitors indicated they lacked incentive to complete it. To address
+                  this:
+                </p>
+                <ul>
+                  <li>Added a section that displays fun and lesser-known facts about Kibble Palace after submission</li>
+                </ul>
+                <p>On the dashboard side, we integrated new features to make the data more insightful for stakeholders.
+                  These includes:
+                </p>
+                <ul>
+                  <li>Added weather impacts to visitor numbers.</li>
+                  <li>Added events and their respective visitor counts.</li>
+                  <li>Show weekly and monthly visitor counts.</li>
+                </ul>
+                <p>These changes were designed to provide clearer, more actionable insights to inform future decisions.</p>
+              </div>
             </div>
 
-            <div class="daily-entry">
-              <h4>Day 8 - Development of Cardboard Prototype </h4>
-              <p>Today, we built a physical cardboard prototype to better simulate the traffic flow of Kibble Palace.
-                The goal was to
-                better visualise how visitors enter, move through, and exit the area especially during busier times
-                where there are events.
-              </p>
-              <p>The prototype included:
-                <li>Two entry/exit points with labelled sensor positions (A and B).</li>
-                <li>A model layout of the palace entrance/exit to simulate real visitor movement.</li>
-                <li>Cardboard cut-outs to represent visitors.</li>
-              </p>
-              <p>Using this, we tested how visitors might unintentionally walk side-by-side or in reverse directions,
-                and how that could affect
-                our dual sensor logic. It helped us confirm the following:
-                <li>Dual sensors are necessary to detect direction.</li>
-                <li>Crowd density or group entry may cause timing challenges for logging.</li>
-                <li>Placement height and angle may impact accuracy.</li>
-              </p>
-              <p>Top-down and POV video footage was recorded during prototyping to show how we simulated visitor flow.
-              </p>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h4>Day 8 - Development of Cardboard Prototype </h4>
+                <p>Today, we built a physical cardboard prototype to better simulate the traffic flow of Kibble Palace.
+                  The goal was to better visualise how visitors enter, move through, and exit the area especially during busier times
+                  where there are events.
+                </p>
+                <p>The prototype included:
+                </p>
+                <ul>
+                  <li>Two entry/exit points with labelled sensor positions (A and B).</li>
+                  <li>A model layout of the palace entrance/exit to simulate real visitor movement.</li>
+                  <li>Cardboard cut-outs to represent visitors.</li>
+                </ul>
+                <p>Using this, we tested how visitors might unintentionally walk side-by-side or in reverse directions,
+                  and how that could affect our dual sensor logic. It helped us confirm the following:
+                </p>
+                <ul>
+                  <li>Dual sensors are necessary to detect direction.</li>
+                  <li>Crowd density or group entry may cause timing challenges for logging.</li>
+                  <li>Placement height and angle may impact accuracy.</li>
+                </ul>
+                <p>Top-down and POV video footage was recorded during prototyping to show how we simulated visitor flow.
+                </p>
+              </div>
             </div>
 
-            <div class="daily-entry">
-              <h4>Day 9 - Reflecting on Visitor Interview Insights and Prototyping</h4>
-              <p>Pitch video 2 was due today, so we used our remaining time to do the final reflections on our full
-                journey, from early assumptions
-                to user feedback and iterative prototyping. Key reflection points included:
-                <li>Visitors were generally unaware of the outdated footfall tracking, which validated our problem
-                  framing.</li>
-                <li>Interview feedback helped us refine our QR form and dashboard insights.</li>
-              </p>
-              <p>By gathering feedback from real users, we were able to further improve our QR form to make it more
-                appealing for visitors to
-                scan and contribute to the demographic tracking, while ensuring their privacy isn't breached.
-              </p>
-              <p>Final edits to the video focused on showcasing the evolution of our prototyping, not just what we
-                built, but why we built it that way.</p>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h4>Day 9 - Reflecting on Visitor Interview Insights and Prototyping</h4>
+                <p>Pitch video 2 was due today, so we used our remaining time to do the final reflections on our full
+                  journey, from early assumptions to user feedback and iterative prototyping. Key reflection points included:
+                </p>
+                <ul>
+                  <li>Visitors were generally unaware of the outdated footfall tracking, which validated our problem
+                    framing.</li>
+                  <li>Interview feedback helped us refine our QR form and dashboard insights.</li>
+                </ul>
+                <p>By gathering feedback from real users, we were able to further improve our QR form to make it more
+                  appealing for visitors to scan and contribute to the demographic tracking, while ensuring their privacy isn't breached.
+                </p>
+                <p>Final edits to the video focused on showcasing the evolution of our prototyping, not just what we
+                  built, but why we built it that way.</p>
+                
+                <div class="media-item">
+                  <p><strong>Pitch Video 2</strong></p>
+                  <div class="video-container">
+                    <span class="media-tag">Video</span>
+                    <iframe style="width: 100%; height: 520px; border:0; border-radius: 12px;" src="https://www.youtube.com/embed/doLc3eM-8xk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
             </div>
-
-            <div class="prototype-video">
-              <p><strong>Pitch Video 2:</strong></p>
-              <iframe width="100%" height="520" src="https://www.youtube.com/embed/doLc3eM-8xk"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-              </iframe>
-            </div>
-
           </div>
         </div>
 
-        <!-- Week 3 -->
         <div id="week-3" class="tab-content">
           <div class="tab-header">
             <h2 class="tab-title">Week 3</h2>
             <p class="tab-description">Final testing, feedback, and preparation for presentation.</p>
           </div>
-
-          <div class="week-section">
-            <div class="daily-entry">
-              <h4>Day 10 - Partner feedback meeting</h4>
-              <p>Today, we met with our partner to discuss the latest stage of our prototype. The session focused on
-                clarifying how our system works and why we made certain design choices.
-              </p>
-              <p>One key question raised was:
-                <br>"Why not just use one sensor on the door where everyone passes through, wouldn't that be cheaper?"
-                <br>We explained that while one sensor could track movement, it would not be able to determine
-                direction. Using
-                a dual sensor setup allows us to identify whether someone is entering or exiting, which is critical for
-                accurate
-                footfall counting, especially in a free-flow space like in the Kibble Palace. It also reduces the risk
-                of miscounting
-                during crowded moments, such as events or school group visits.
-              </p>
-              <p>Another question was:
-                <br>"How does the system distinguish entry from exit?"
-                <br>We explained that the two sensors would be placed in sequence. If Sensor A triggers before Sensor B,
-                it's logged
-                as an entry. If Sensor B triggers before Sensor A, it's logged as an exit. This simple logic forms the
-                core of our
-                tracking system and is both cost-effective and privacy-respecting.
-              </p>
-              <p>This discussion helped reinforce the importance of clearly communicating the logic and benefits of our
-                setup. It also
-                confirmed that our solution aligns well with the client's goals, accuracy, simplicity and minimal
-                disruption to the building.
-              </p>
-            </div>
-
-            <div class="daily-entry">
-              <h4>Day 11 - Usability Testing and Poster</h4>
-              <p>Day 11 marks the submission of our group poster. Today the team finalised the poster together using
-                what was taught during
-                the lecture on poster design during Day 9 conducted by Prof. Alistair. The poster was designed to be
-                visually appealing,
-                informative, and easy to read. We used a clean layout with clear headings, bullet points, and visuals to
-                highlight our key findings and design process.
-                Furthermore, we also made sure to ensure that the mistakes of posters that Prof. Alistair highlighted
-                during the lecture were not repeated in our poster.
-                One such example, is ensuring that the poster is not too wordy and the font size is large enough to be
-                read from a distance.
-
-                In addition to the poster, we also conducted usability testing on our prototype which can be viewed form
-                the video below. We invited a classmate to interact with our figma prototype and
-                provide feedback on the user experience. The main feedback we received was that the prototype was
-                missing a back button at the end of the form which
-                did not allow the user to go back to the previous page. This was a key insight that we took into account
-                and made sure to implement in our final prototype.
-                the user also pointed out that the use of interesting facts about the Kibble Palace gave them an
-                incentive to scan the QR code form to complete the form.
-              </p>
-              <p><strong>Poster:</strong></p>
-              <div class="poster-container">
-                <img src="assets/images/Poster.png" alt="Poster">
-              </div>
-              <div class="prototype-video">
-                <p><strong>Usability Testing:</strong></p>
-                <iframe width="100%" height="520" src="https://www.youtube.com/embed/7_2vRjmCYCc"
-                  title="YouTube video player" frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen>
-                </iframe>
+          
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h4>Day 10 - Partner feedback meeting</h4>
+                <p>Today, we met with our partner to discuss the latest stage of our prototype. The session focused on
+                  clarifying how our system works and why we made certain design choices.
+                </p>
+                <p>One key question raised was:
+                  <br>"Why not just use one sensor on the door where everyone passes through, wouldn't that be cheaper?"
+                  <br>We explained that while one sensor could track movement, it would not be able to determine
+                  direction. Using a dual sensor setup allows us to identify whether someone is entering or exiting, which is critical for
+                  accurate footfall counting, especially in a free-flow space like in the Kibble Palace. It also reduces the risk
+                  of miscounting during crowded moments, such as events or school group visits.
+                </p>
+                <p>Another question was:
+                  <br>"How does the system distinguish entry from exit?"
+                  <br>We explained that the two sensors would be placed in sequence. If Sensor A triggers before Sensor B,
+                  it's logged as an entry. If Sensor B triggers before Sensor A, it's logged as an exit. This simple logic forms the
+                  core of our tracking system and is both cost-effective and privacy-respecting.
+                </p>
+                <p>This discussion helped reinforce the importance of clearly communicating the logic and benefits of our
+                  setup. It also confirmed that our solution aligns well with the client's goals, accuracy, simplicity and minimal
+                  disruption to the building.
+                </p>
               </div>
             </div>
 
-            <div class="daily-entry">
-              <h4>Day 12 - </h4>
-              <p>website?</p>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h4>Day 11 - Usability Testing and Poster</h4>
+                <p>Day 11 marks the submission of our group poster. Today the team finalised the poster together using
+                  what was taught during the lecture on poster design during Day 9 conducted by Prof. Alistair. The poster was designed to be
+                  visually appealing, informative, and easy to read. We used a clean layout with clear headings, bullet points, and visuals to
+                  highlight our key findings and design process.
+                  Furthermore, we also made sure to ensure that the mistakes of posters that Prof. Alistair highlighted
+                  during the lecture were not repeated in our poster.
+                  One such example, is ensuring that the poster is not too wordy and the font size is large enough to be
+                  read from a distance.
+
+                  In addition to the poster, we also conducted usability testing on our prototype which can be viewed form
+                  the video below. We invited a classmate to interact with our figma prototype and
+                  provide feedback on the user experience. The main feedback we received was that the prototype was
+                  missing a back button at the end of the form which
+                  did not allow the user to go back to the previous page. This was a key insight that we took into account
+                  and made sure to implement in our final prototype.
+                  the user also pointed out that the use of interesting facts about the Kibble Palace gave them an
+                  incentive to scan the QR code form to complete the form.
+                </p>
+                
+                <div class="media-item" style="max-width: 800px; margin-left: auto; margin-right: auto; padding: 0; background: none; box-shadow: none; border: none;">
+                  <p><strong>Group Poster</strong></p>
+                  <div style="border-radius: 16px; overflow: hidden; box-shadow: 0 20px 60px rgba(85, 139, 110, 0.2);">
+                      <img src="assets/images/Poster.png" alt="Poster" style="width: 100%; height: auto; display: block;">
+                  </div>
+                </div>
+                
+                <div class="media-item">
+                  <p><strong>Usability Testing</strong></p>
+                  <div class="video-container">
+                    <span class="media-tag">Video</span>
+                    <iframe style="width: 100%; height: 520px; border:0; border-radius: 12px;" src="https://www.youtube.com/embed/7_2vRjmCYCc" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div class="daily-entry">
-              <h4>Day 13 - </h4>
-              <p></p>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h4>Day 12 - Implementing Usability Feedback</h4>
+                <p>Acting on the specific feedback from yesterday's usability testing, today's work centered on refining the navigation of our post-submission "Interesting Facts" feature. Our test user noted that while they could proceed forward to view multiple facts, there was no "Back" button, preventing them from revisiting a previous fact they had already seen.</p>
+
+                <p>To resolve this, we updated the Figma prototype by implementing the missing "Back" button, which now works alongside the existing forward navigation. This addition gives users full control over their post-submission experience, allowing them to freely browse back and forth through the educational content at their leisure.</p>
+
+                <p>A key consideration was to maintain clarity about the form's status. The new "Back" button's functionality is intentionally limited to navigating only between the interesting facts. It does not allow the user to return to the form itself, ensuring that once the form is submitted, the process is clearly complete and preventing any user confusion.</p>
+              </div>
             </div>
 
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h4>Day 13 - Final Deliverables and Project Reflection</h4>
+                <p>With the prototyping and testing phases complete, the focus for Day 13 was to consolidate our work and document the journey. The main tasks were to finalize this website and write our comprehensive project reflections, which involved looking back at our process from start to finish.</p>
+
+                <p>Finalising the website meant ensuring every page was polished and cohesive. We populated each section with the relevant text, images, videos, and interactive embeds that we created over the past three weeks. The goal was to create a clear narrative that walks a visitor through our entire design process, from understanding the initial challenge on the homepage to exploring the detailed prototypes and reviewing the final proposal.</p>
+
+                <p>The most significant task was writing our reflections. As a team, we looked back on the key moments of the project. We discussed the critical insights from our first stakeholder meeting regarding heritage constraints, the technical learnings that led us from a single to a dual-sensor system, and how direct feedback from Kibble Palace visitors fundamentally shaped our QR code form and dashboard design. This exercise was crucial for articulating the "why" behind our design decisions. The outcome of this work now forms the content of the 'Reflections' page on this site, bringing our project to a close.</p>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -458,7 +550,6 @@
     </div>
   </div>
 
-  <!-- Footer -->
   <footer>
     <div class="footer-content">
       <p style="color: white;">© Copyright Team 17 - Kibble Palace Project. All Rights Reserved</p>
