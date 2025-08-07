@@ -2,7 +2,6 @@
 <html>
 
 <head>
-  <link rel="icon" type="image/png" href="assets/images/favicon-leaf.png">
   <link rel="stylesheet" href="style.css">
   <title>About Us</title>
   <meta charset="UTF-8">
@@ -46,6 +45,37 @@
     .final-content-area {
       padding: 3rem 0;
     }
+    
+    /* New styles for team member cards */
+    .team-card h6 {
+      font-family: 'Inter', sans-serif;
+      color: #558b6e;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-top: -0.5rem;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    /* --- UPDATED GRID LAYOUT --- */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    @media (max-width: 1024px) {
+      .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 768px) {
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    /* --- END OF UPDATE --- */
+    
   </style>
 </head>
 
@@ -60,12 +90,46 @@
     </header>
 
     <main class="final-content-area">
+    
+      <section class="section">
+        <h3 style="text-align: center; font-size: 2.2rem; margin-bottom: 3rem;">Meet the Gardeners</h3>
+        <p class="intro-text" style="margin-bottom: 3rem;">As student designers and developers, we are focused on creating meaningful, low-cost solutions for real-world problems. Each member of Team 17 brought a unique skill to cultivate this project from a seed of an idea into a fully-grown solution.</p>
+        
+        <div class="team-grid">
+          <div class="feature-card team-card">
+            <h5>Goh Jia Rui Gary</h5>
+            <h6>Lead Cultivator</h6>
+            <p>Nurtured the project's growth from start to finish, ensuring the team stayed aligned with the core goals and stakeholder needs.</p>
+          </div>
+          <div class="feature-card team-card">
+            <h5>Tay Rui Qi</h5>
+            <h6>Root Architect</h6>
+            <p>Engineered the foundational logic of the system, creating the strong technical base needed for the project to flourish.</p>
+          </div>
+          <div class="feature-card team-card">
+            <h5>Elroy Lee</h5>
+            <h6>Canopy Designer</h6>
+            <p>Crafted the visual and user-facing elements of the website and dashboard, shaping the aesthetic canopy of the project.</p>
+          </div>
+          <div class="feature-card team-card">
+            <h5>Chew Liang Zhi</h5>
+            <h6>UX Botanist</h6>
+            <p>Studied the user journey and visitor behaviour, ensuring the final solution was intuitive and met the needs of its human ecosystem.</p>
+          </div>
+          <div class="feature-card team-card">
+            <h5>Ng Quan Han</h5>
+            <h6>Ecosystem Analyst</h6>
+            <p>Researched the project environment, from pre-existing solutions to visitor feedback, providing vital nutrients of insight.</p>
+          </div>
+          <div class="feature-card team-card">
+            <h5>Fan Xinyu</h5>
+            <h6>Prototype Propagator</h6>
+            <p>Brought ideas to life by building tangible prototypes, allowing the team to test and grow concepts in a real-world context.</p>
+          </div>
+        </div>
+      </section>
 
-      <p class="large-text" style="text-align: center; max-width: 900px; margin: 0 auto 3rem auto;">
-        We are Team 17: Fan Xinyu, Tay Rui Qi, Chew Liang Zhi, Elroy Lee, Ng Quan Han, and Goh Jia Rui Gary. As a group of student designers and developers, we are focused on creating meaningful, low-cost solutions for real-world problems.
-      </p>
-
-      <div class="text-image-flow" style="margin-top: 4rem;">
+      <div class="text-image-flow" style="margin-top: 5rem;">
         <div class="text-content">
           <h3 style="text-align: left; font-size: 2.2rem;">Our Journey</h3>
           <p>Our diverse backgrounds in engineering, design, and technology allowed us to approach this challenge from multiple perspectives. Throughout this project, we've learned the importance of balancing technological innovation with heritage preservation.</p>
