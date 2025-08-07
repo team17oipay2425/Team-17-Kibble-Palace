@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <title>Our Design Process</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div id="navbar"></div>
+  <div class="bg-decoration"></div>
+
+  <div class="container">
+    <header class="header">
+      <h1>Our Design Process</h1>
+      <p>A look into the user-centred methodology that guided our project from concept to creation.</p>
+    </header>
+
+    <main class="reflections-flow">
+
+      <!-- Section 1 - Empathise & Define -->
+      <section class="reflection-section">
+        <div class="section-marker">
+          <span class="section-number">01</span>
+          <div class="marker-line"></div>
+        </div>
+        <div class="section-content">
+          <h2>Empathise & Define</h2>
+          <p class="section-intro">Every successful design begins with a deep understanding of the problem. Our first step was to immerse ourselves in the world of the Kibble Palace and its stakeholders.</p>
+
+          <div class="insights-flow">
+            <div class="insight-point">
+              <h3>Stakeholder Collaboration</h3>
+              <p>Our initial meeting with the Friends of Glasgow Botanic Gardens was foundational. We learned that the core challenge wasn't just about counting people, but about justifying resource allocation, securing funding, and making informed operational decisions. This session defined our primary constraints: the solution had to be extremely low-cost, completely non-invasive to the historic structure, and respectful of visitor privacy.</p>
+            </div>
+
+            <div class="insight-point">
+              <h3>On-Site Observation & Visitor Interviews</h3>
+              <p>To understand the user perspective, we visited the Kibble Palace to observe visitor flow and conduct informal interviews. This revealed a crucial insight: most visitors assumed a modern tracking system was already in place and were supportive of anonymous data collection if it helped maintain the free-entry policy. This validated our problem statement and gave us the confidence to pursue a discreet, background solution.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2 - Ideate & Research -->
+      <section class="reflection-section">
+        <div class="section-marker">
+          <span class="section-number">02</span>
+          <div class="marker-line"></div>
+        </div>
+        <div class="section-content">
+          <h2>Ideate & Research</h2>
+          <p class="section-intro">With a clear problem defined, we moved into a phase of broad exploration, researching existing technologies and sketching out initial concepts.</p>
+
+          <div class="insights-flow">
+            <div class="insight-point">
+              <h3>Evaluating Pre-existing Solutions</h3>
+              <p>We conducted a thorough analysis of existing footfall technologies. High-cost, invasive options like thermal imaging and pressure plates were quickly ruled out due to heritage and budget constraints. Camera-based computer vision was also rejected to ensure absolute visitor privacy. This research was vital in narrowing our focus to a sensor-based approach.</p>
+            </div>
+
+            <div class="insight-point">
+              <h3>Low-Fidelity Sketching</h3>
+              <p>Our team used paper sketches to rapidly ideate how a sensor system could work. This process revealed a critical flaw in a single-sensor design, it couldn't determine direction. The simple act of sketching led us to the dual-sensor logic (A→B for entry, B→A for exit) that became the technical core of our final proposal, proving that simple, low-cost ideation can solve complex problems.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3 - Prototype -->
+      <section class="reflection-section">
+        <div class="section-marker">
+          <span class="section-number">03</span>
+          <div class="marker-line"></div>
+        </div>
+        <div class="section-content">
+          <h2>Prototype</h2>
+          <p class="section-intro">To turn our ideas into something tangible that could be tested and refined, we developed both physical and digital prototypes.</p>
+
+          <div class="insights-flow">
+            <div class="insight-point">
+              <h3>Physical Mockup for Flow Simulation</h3>
+              <p>We built a to-scale cardboard prototype of the Kibble Palace entrance to simulate real-world visitor traffic. Testing with this mockup allowed us to identify potential issues with our sensor logic, such as how to handle large groups or bidirectional flow, long before any hardware was involved. This low-cost test was invaluable for validating our core concept and refining sensor placement.</p>
+            </div>
+
+            <div class="insight-point">
+              <h3>Digital Prototyping for User Interaction</h3>
+              <p>Using Figma, we created high-fidelity, interactive prototypes of the QR code form and the data dashboard. This allowed us to test the user interface and overall experience. The digital prototype was a crucial tool for our usability testing sessions, enabling us to gather specific, actionable feedback on the design's clarity and ease of use.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4 - Test & Iterate -->
+      <section class="reflection-section final-section">
+        <div class="section-marker">
+          <span class="section-number">04</span>
+        <div class="marker-line final-line"></div>
+        </div>
+        <div class="section-content">
+          <h2>Test & Iterate</h2>
+          <p class="section-intro">A design is only successful if it works for its users. Our final phase was dedicated to gathering feedback and making iterative improvements.</p>
+
+          <div class="insights-flow">
+            <div class="insight-point">
+              <h3>Usability Testing</h3>
+              <p>We conducted formal usability testing sessions with our Figma prototypes. This process uncovered specific usability issues, such as the missing "Back" button in our QR code form's post-submission screen. This direct feedback led to immediate, tangible improvements to the final design, reinforcing the value of testing with fresh eyes.</p>
+            </div>
+
+            <div class="insight-point">
+              <h3>Refining the Value Proposition</h3>
+              <p>Feedback from visitors that they lacked an incentive to use the QR code form was a critical insight. This led us to iterate on the design by adding the "Interesting Facts" feature, transforming a simple data collection tool into an engaging, value-added experience for the visitor. This change was a direct result of listening to our users and adapting the design to meet their needs.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <p style="color: white;">© Copyright Team 17 - Kibble Palace Project. All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="nav.js"></script>
+</body>
+
+</html>
